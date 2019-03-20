@@ -1,0 +1,234 @@
+body {
+	text-align: center;
+	background-color:#f7e5c0;
+	font-family: 'Corben' , Helvetica , Arial;
+	background-image: url('inspiration-geometry.png');
+}
+
+h2{
+	transition: 0.3s;
+}
+
+.textoprodutos{
+		text-shadow: 1px 1px 1px #f5cd79;;
+		margin-top:auto;
+}
+
+
+/* hover iphone */
+
+#iphone{
+	text-shadow: 1px 1px 1px #596275;
+	font-size: 68px;
+	transition: 0.3s;
+}
+
+#vitrine:hover #iphone{
+	font-size: 70px;
+	text-shadow: 2px 2px 2px #f7d794;
+	transition: 0.4s;
+	letter-spacing: 2px;
+}
+
+#vitrine:hover  .img-fluid{
+transform: translateY(4px);
+transition: 0.4s;
+transform: scale(1.07);
+}
+
+#vitrine:hover  h2{
+letter-spacing:2px;
+transform: translateY(1px);
+text-shadow: 2px 2px 2px #f7d794;
+transition: 0.4s;
+}
+
+
+
+h1,h2{
+	text-shadow: 1px 1px 1px #596275;
+    color:#303952;
+}
+
+/* */
+
+nav{
+	background-color:#786fa6;
+	box-shadow: 0 2px #574b90;
+}
+.navbar-light .navbar-nav .nav-link{ color:white;}
+
+.btn-group-vertical {
+	margin-top: 24px;
+}
+.btn{
+	margin-bottom:10px;
+	border-radius:4px;	
+	background-color: #ea8685;
+	border-color:#ea8685;
+	color:#503047;
+	font-size: 22px;
+	box-shadow: 0 4px #c44569;
+	border-radius: 8px !important;
+	overflow:hidden;
+}
+
+.btn:active {
+  transform: translateY(6px);
+}
+
+.btn:hover{
+box-shadow: 0 6px #c44569; 
+transition: 0.2s;
+background-color: #e77574;
+border-color:#e77574;
+}
+
+.btn-secondary:hover{
+box-shadow: 0 6px #c44569;
+letter-spacing: 1px;  
+transition: 0.2s;
+background-color: #e77574;
+border-color:#e77574;
+}
+
+#vitrine{
+border-radius:6px;	
+border-color:#ea8685;
+background-color: #ea8685;
+display:flex;
+margin-top: 24px;
+margin-left: 2%;
+align-self: center;
+height: 450px;
+width: 60%;
+margin-right: 10%;
+align-content: center;
+background-image: url('crisp-paper-ruffles.png');
+box-shadow: 0 2px #c44569;
+overflow:hidden;
+}
+
+
+.vitrine2{
+	text-align:center;	
+	color:#303952;
+}
+
+.box{}
+
+.col-sm-3{
+padding-top: .75rem;
+padding-bottom: .75rem;
+background-color: #786fa6;
+border: 1px solid rgba(86,61,124,0.2);
+margin: 2px;
+border-radius:4px;
+color:white;
+box-shadow: 0 4px #303952;
+margin-top: 28px;
+overflow:hidden;
+display: flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.col-sm-4{
+padding-top: .75rem;
+padding-bottom: .75rem;
+background-color: #786fa6;
+border: 1px solid rgba(86,61,124,0.2);
+margin: 2px;
+border-radius:4px;
+color:white;
+box-shadow: 0 4px #303952;
+margin-top: 28px;
+overflow:hidden;
+display: flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.item{
+	align-self: center;
+	margin-top:auto;
+}
+
+.img-fluid{
+max-width:70%;
+max-height:70%;
+transition: 0.2s;
+}
+
+.sachiko{
+max-width:95%;
+max-height:95%;
+}
+
+.container-fluid{
+	display:flex;
+	justify-content: center;
+	
+}
+
+.display {	
+	align-items: center;
+	flex-direction:column;
+}
+
+.produtos{
+	justify-content: space-evenly;
+}
+
+.promo {
+	background-color:#786fa6;
+	margin-top: 28px;
+	height: 360px;
+	justify-content: flex-start;
+	background-image: url('asfalt-light.png');
+	overflow:hidden;
+	box-shadow: 0 6px #303952;
+	border-radius: 8px;
+}
+
+.foobar{
+	text-shadow: 1px 1px 1px #ffffff;
+	font-size: 60px;
+	transition: 0.2s;
+	padding: 38px;
+	padding-top: 0px;
+}
+
+.sachikopromo{
+max-width:95%;
+max-height:95%;
+margin-left:48px;
+padding:8px;
+}
+
+.sign{
+max-width:100%;
+max-height:100%;
+position:absolute;
+align-self: center;
+}
+
+.col-sm-8{
+	margin-bottom: 10px;
+}
+
+.texto{
+	align-self: center;
+}
+
+
+.texto2{
+	padding: 44px;
+}
+
+h4{color: #f5cd79;}
+
+#oferta {
+	color:white;
+}
+
