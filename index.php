@@ -46,11 +46,11 @@
 
 <div class="container-fluid d-flex p-2">
 	<div class="btn-group-vertical col-2">
-		<button class="btn btn-secondary btn-lg">Informacoes</button>
-		<button class="btn btn-secondary btn-lg">Sobre Nos</button>
-		<button class="btn btn-secondary btn-lg">Entregas</button>
-		<button class="btn btn-secondary btn-lg">Privacidade</button>
-		<button class="btn btn-secondary btn-lg">Blog</button>
+		<button class="btn btn-secondary btn-lg"> <a href="info.php">    Informacoes  </a></button>
+		<button class="btn btn-secondary btn-lg"> <a href="about.php">    Sobre Nos   </a></button>
+		<button class="btn btn-secondary btn-lg"> <a href="entregas.php"> Entregas    </a></button>
+		<button class="btn btn-secondary btn-lg"> <a href="priv.php">     Privacidade </a></button>
+		<button class="btn btn-secondary btn-lg"> <a href="blog.php">     Blog        </a></button>
 	</div>	
 	
 <!-- vitrine -->
@@ -101,7 +101,7 @@
   
   <div class="col-sm-3">
 	<img class="img-fluid item" src="notfound.png"/>
-	<h1  class="textoprodutos" >Dragon Dildo</h1> 
+	<h1  class="textoprodutos" >Dragon</h1> 
   	<h4>R$328,99</h4>
   </div>
   
