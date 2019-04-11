@@ -7,8 +7,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>Market M171 - Produtos</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Corben" />
+        <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
         <?php
@@ -20,13 +23,13 @@
         <br><br><br>
         
         <?php
-            if( isset( $_SESSION['admin']) && $_SESSION['admin'] ){
+           // if( isset( $_SESSION['admin']) && $_SESSION['admin'] ){
         ?>
                 <a href="frmProduto.php">
-                    <button>Cadastrar novo Produto</button></a>
+                    <button class="btn btn-large">Cadastrar novo Produto</button></a>
                 <br><br>
         <?php
-            }
+           // }
             
             $lista = ProdutoDAO::getProdutos();
             
@@ -35,50 +38,24 @@
             } else {
               
         ?>
-        <table border="1">
-            <tr>
-                <th>Código</th>
-                <th>Foto</th>
-                <th>Nome do Produto</th>
-                <th>Preço</th>
-                <th>Quantidade</th>
-                <th>Categoria</th>
-                <th>Editar</th>
-                <th>Excluir</th>
-                <th>Comprar</th>
-            </tr>
-            
+       
+<div class="container-fluid display">
+ <div class="row produtos">
+
             <?php
                     foreach ($lista as $pro){
-                        echo '<tr> ';
-                        echo '   <td>'.$pro->getId().'</td>';
-                        echo '   <td><img src="fotos_produtos/'.$pro->getFoto().'" width="30px" /></td>';
-                        echo '   <td>'.$pro->getNome().'</td>';
+                        echo '<div class="col-sm-3"> ';
+                        echo '   <img class="img-fluid item" src="fotos_produtos/'.$pro->getFoto().'"/>';
+                        echo '   <h1  class="textoprodutos">'.$pro->getNome().'</h1>';
                         
                         $preco = str_replace(".", ",",$pro->getPreco() );
-                        echo '   <td>R$ '.$preco.'</td>';
-                        
-                        $qtd = str_replace(".", ",",$pro->getQuantidade() );
-                        echo '   <td>'.$qtd.'</td>';
-                        
-                        echo '   <td>'.$pro->getCategoria()->getNome().'</td>';
-                        
-                        $desabilita = "";
-                        if( !isset( $_SESSION['admin']) || !$_SESSION['admin']  ){
-                            $desabilita = " disabled ";
-                        }
-                        
-                        echo '   <td><a href="frmProduto.php?editar&idProduto='.$pro->getId().'" ><button '.$desabilita.' >Editar</button></a></td>';
-                        echo '   <td><a href="controller/salvarProduto.php?excluir&idProduto='.$pro->getId().'" ><button '.$desabilita.' >Excluir</button></a></td>';
-                        echo '   <td><a href="carrinho.php?adicionar&idProduto='
-                                .$pro->getId().'" ><button>Adicionar</button></a></td>';
-                        
-                        echo '</tr>';
+                        echo '   <h4>R$ '.$preco.'</h4>';
+                        echo '</div>';
                         
                     }
             ?>
-            
-        </table>
+              </div>
+  </div>
         
         <?php
         

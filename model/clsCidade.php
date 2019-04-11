@@ -3,19 +3,24 @@
 class Cidade {
     private $id;
     private $nome;
+    private $estado;
     
     public function __construct($id = NULL, $nome = NULL){
         $this->id = $id;
         $this->nome = $nome;
     }
     
-    // Guetter
+    // Getter
     function getId(){
         return $this->id;
     }
 
     function getNome() {
         return $this->nome;
+    }
+    
+    function getEstado() {
+        return $this->$estado;
     }
     
     // Setter
@@ -26,4 +31,9 @@ class Cidade {
     function setNome($nome) {
         $this->nome = $nome;
     }
+    
+    function setEstado($estado){
+        $this->estado = $estado;
+    }
+    
 }

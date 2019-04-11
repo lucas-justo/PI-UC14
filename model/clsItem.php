@@ -8,7 +8,7 @@ class Item {
     private $preco;
     private $quantidade;
     
-    // Guetter
+    // Getter
     function getId() {
         return $this->id;
     }

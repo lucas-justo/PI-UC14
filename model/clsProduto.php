@@ -7,13 +7,15 @@ class Produto{
 	private $quantidade;
 	private $categoria;
 	private $foto;
-
+    private $descricao;
+    private $marca;
+    private $promo;
 
 	public function __construct(){
 
 	}
 
-	// Guetter
+	// Getter
 	function getId(){
 	return $this->id;
 	}
@@ -30,13 +32,26 @@ class Produto{
 		return $this->quantidade;
 	}
 
-	function getCatedoria(){
+	function getCategoria(){
 		return $this->categoria;
 	}
 
 	function getFoto(){
 		return $this->foto;
 	}
+	
+	function getDescricao(){
+        return $this->$descricao;
+	}
+	
+	function getPromo(){
+        return $this->$promo;
+	}
+	
+	function getMarca(){
+        return $this->$marca;
+	}
+	
 
 	// Setter
 	function setId($id){
@@ -61,5 +76,17 @@ class Produto{
 
 	function setFoto($foto){
 		$this->foto = $foto;
+	}
+	
+	function setMarca($marca){
+        $this->marca = $marca;
+	}
+	
+	function setDescricao($descricao){
+        $this->descricao = $descricao;
+	}
+	
+	function setPromo($promo){
+        $this->promo = $promo;
 	}
 }
