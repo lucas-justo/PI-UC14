@@ -28,6 +28,8 @@
                 <a href="frmProduto.php">
                     <button class="btn btn-large">Cadastrar novo Produto</button></a>
                 <br><br>
+				<a href="frmCategoria.php">
+					<button class="btn btn-large">Cadastrar nova Categoria</button></a>
         <?php
            // }
             

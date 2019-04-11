@@ -1,0 +1,68 @@
+CREATE TABLE produto
+(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT ,
+    nome VARCHAR(50) , 
+    preco DOUBLE ,
+    quantidade INT ,
+    idCategoria INT ,
+    foto VARCHAR(100) ,
+    descricao VARCHAR(400)  ,
+    marca VARCHAR(50)   NULL ,
+    promo INT NULL
+);
+
+CREATE TABLE cidade (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT ,
+    nome VARCHAR(50) ,
+    idEstado INT  
+);
+
+CREATE TABLE estado (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT ,
+    nome VARCHAR(50) ,
+    idPais INT
+);
+
+CREATE TABLE pais (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT ,
+    nome VARCHAR(50) ,
+    lingua VARCHAR(30),
+    moeda VARCHAR(30)
+);
+
+INSERT INTO pais (nome , lingua , moeda) VALUES ( 'Brasil' , 'pt-br' , 'BRL' ) , ( 'United States' , 'en-us' , 'USD');
+
+INSERT INTO estado (nome , idPais) VALUES ( 'Rio Grande do Sul' , 1 ) , ( 'Santa Catarina' , 1) , ( 'California' , 2);
+
+INSERT INTO cidade (nome , idEstado) VALUES ( 'Porto Alegre' , 1 ) , ( 'Esteio' , 1) , ( 'Canoas' , 1) , ( 'Cachoeirinha' , 1 ) , ( 'Santa Maria' , 1 ) , ( 'Passo Fundo' , 1) , ('Florianopolis' , 2) , ('Los Angeles' , 3) , ('San Francisco' , 3);
+
+
+ALTER TABLE estado
+ADD FOREIGN KEY (idPais) REFERENCES pais(id) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+ALTER TABLE cidade
+ADD FOREIGN KEY (idEstado) REFERENCES estado(id) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+
+CREATE TABLE categoria (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT ,
+    nome VARCHAR(50)
+);
+
+CREATE TABLE cliente (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT ,
+    nome VARCHAR(50) ,
+    telefone VARCHAR(20) ,
+    email VARCHAR(40) ,
+    cpf VARCHAR(40) ,
+    senha VARCHAR(50) ,
+    idCidade INT,
+    foto VARCHAR(100),
+    sexo INT
+);
+
+ALTER TABLE cliente
+ADD FOREIGN KEY (idCidade) REFERENCES cidade(id) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+INSERT INTO categoria (nome) VALUES ( 'Sem Categoria' );
+
