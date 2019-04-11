@@ -17,11 +17,10 @@
 
 <div class="container-fluid d-flex p-2">
 	<div class="btn-group-vertical col-2">
-		<button class="btn btn-secondary btn-lg"> <a href="info.php">    Informacoes  </a></button>
-		<button class="btn btn-secondary btn-lg"> <a href="about.php">    Sobre Nos   </a></button>
-		<button class="btn btn-secondary btn-lg"> <a href="entregas.php"> Entregas    </a></button>
-		<button class="btn btn-secondary btn-lg"> <a href="priv.php">     Privacidade </a></button>
-		<button class="btn btn-secondary btn-lg"> <a href="blog.php">     Blog        </a></button>
+		<button class="btn btn-secondary btn-lg"> <a href="about.php">           Sobre Nos   </a></button>
+		<button class="btn btn-secondary btn-lg"> <a href="entregas.php">        Entregas    </a></button>
+		<button class="btn btn-secondary btn-lg"> <a href="privacidade.php">     Privacidade </a></button>
+		<button class="btn btn-secondary btn-lg"> <a href="blog.php">            Blog        </a></button>
 	</div>	
 	
 <!-- vitrine -->

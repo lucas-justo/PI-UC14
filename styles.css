@@ -282,3 +282,39 @@ text-align: center;
 margin-left: auto;
 margin-right: auto;
 }
+
+#tabela{
+margin-left: auto;
+margin-right: auto;
+}
+
+th{
+background-color: #ea8685;
+}
+
+.btn-tabela{
+max-width: 90%;
+max-height: 50%;
+font-size: 14px;
+text-align:center;
+}
+
+.blog{
+min-width: 80%;
+background-color:#786fa6;
+min-height: 100%;
+}
+
+.btn-blog{
+max-width: 72%;
+}
+
+.blog-container{
+	width: 100%;
+	height: 100%;
+}
+
+.teste{
+	width: 100%;
+	height: 100%;
+}
