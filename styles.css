@@ -300,9 +300,9 @@ text-align:center;
 }
 
 .blog{
-min-width: 80%;
+max-width: 60%;
 background-color:#786fa6;
-min-height: 100%;
+max-height: 70%;
 }
 
 .btn-blog{
@@ -322,4 +322,15 @@ max-width: 72%;
 ul {
 	justify-content: center;
 	
+}
+
+.botao{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.correcao-promo{
+	width: 68%;
+	margin-top: 0%;
 }
