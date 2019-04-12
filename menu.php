@@ -40,7 +40,7 @@
        }
     ?>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">-->
     <ul class="navbar-nav ml-auto mx-auto">
      
       <li class="nav-item dropdown col-6">
@@ -59,11 +59,11 @@
     <li class="nav-item  col-4"><a  class="nav-link" href="#">Audio</a></li>
     <li class="nav-item  col-4"><a  class="nav-link" href="#">TVs</a></li>        
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+ <!-- </div> -->
+  <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Nome do Produto.." aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-    </form>
-  </div>
+  </form>
 </nav>
     
 </header>
