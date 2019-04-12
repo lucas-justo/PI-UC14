@@ -1,5 +1,7 @@
 <?php
     include_once 'model/clsCidade.php';
+	include_once 'model/clsEstado.php';
+	include_once 'model/clsPais.php';
     include_once 'model/clsCliente.php';
     include_once 'dao/clsCidadeDAO.php';
     include_once 'dao/clsClienteDAO.php';
@@ -12,7 +14,6 @@
     $email = "";
     $cpf = "";
     $sexo = "";
-    $filhos = 0;
     $admin = 0;
     $idCidade = 0;
     $foto = "sem_foto.png";
@@ -26,7 +27,6 @@
         $email = $cliente->getEmail();
         $cpf = $cliente->getCpf();
         $sexo = $cliente->getSexo();
-        $filhos = $cliente->getFilhos();
         $admin = $cliente->getAdmin();
         $foto = $cliente->getFoto();
         $idCidade = $cliente->getCidade()->getId();
@@ -38,17 +38,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>Market M171 - Cadastrar Cliente</title>
-    </head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Corben" />
+ <link rel="stylesheet" type="text/css" href="styles.css">
+         <title>Cadastro de Cliente</title>
+</head>
     <body>
         <?php
             require_once 'menu.php';
         ?>
         
-         <h1 align="center">Cadastrar Cliente</h1>
-        
-        <br><br><br>
+         <h1 align="center">Cadastrar Cliente</h1>     
         
         <form action="controller/salvarCliente.php?<?php echo $action; ?>" method="POST" 
               enctype="multipart/form-data">
@@ -74,7 +76,44 @@
             
             <label>CPF: </label>
             <input type="text" name="txtCPF" value="<?php echo $cpf; ?>" required /> <br><br>
+			
+			<label>Pais: </label>
+            <select name="pais" >
+                <option value="0"  >Selecione...</option>
+                <?php
+                    $lista = CidadeDAO::getPais();
+                    
+                    foreach ($lista as $pais){
+                        $selecionar = "";
+                        if( $idPais == $pais->getId() ){
+                            $selecionar = " selected ";
+                        }
+                        
+                        echo '<option '.$selecionar.' value="'.$pais->getId().'" >'.
+                                $pais->getNome().'</option>';
+                    }
+                ?>
+			</select>
             
+			<label>Estado: </label>
+            <select name="estado" >
+                <option value="0"  >Selecione...</option>
+                <?php
+                    $lista = CidadeDAO::getEstados();
+                    
+                    foreach ($lista as $estado){
+                        $selecionar = "";
+                        if( $idEstado == $estado->getId() ){
+                            $selecionar = " selected ";
+                        }
+                        
+                        echo '<option '.$selecionar.' value="'.$estado->getId().'" >'.
+                                $estado->getNome().'</option>';
+                    }
+                ?>
+			</select>
+			
+			
             <label>Cidade: </label>
             <select name="cidade" >
                 <option value="0"  >Selecione...</option>
@@ -94,7 +133,6 @@
                 
             </select>
             
-            <br><br>
             <?php 
                 $feminino = "";
                 $masculino = "";
@@ -105,20 +143,11 @@
                     $masculino = " checked ";
                 }
             ?>
-            
+            <div>
             <label>Sexo: </label>
             <input type="radio" name="rbSexo" <?php echo $feminino; ?> value="f" required /> Feminino 
             <input type="radio" name="rbSexo" <?php echo $masculino; ?> value="m" /> Masculino <br><br>
-            
-            <?php
-                $checado = "";
-                if( $filhos ){
-                    $checado = " checked ";
-                }
-            ?>
-            <input type="checkbox" name="cbFilhos" <?php echo $checado; ?> /> Tem Filhos <br><br>
-            <label>Foto: </label>
-            
+            </div>
             <?php 
                 if( isset($_REQUEST['editar'])){
                     echo '<img src="fotos_clientes/'.$foto.'" width="30px" />';

@@ -1,9 +1,8 @@
 <?php
 
-class Cidade {
+class Pais {
     private $id;
     private $nome;
-    private $idEstado;
     
     public function __construct($id = NULL, $nome = NULL){
         $this->id = $id;
@@ -19,10 +18,6 @@ class Cidade {
         return $this->nome;
     }
     
-    function getIdEstado() {
-        return $this->$idEstado;
-    }
-    
     // Setter
     function setId($id){
         $this->id = $id;
@@ -30,10 +25,6 @@ class Cidade {
     
     function setNome($nome) {
         $this->nome = $nome;
-    }
-    
-    function setIdEstado($idEstado){
-        $this->idEstado = $idEstado;
     }
     
 }

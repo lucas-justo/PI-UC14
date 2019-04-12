@@ -30,11 +30,10 @@
     <input class="form-control mr-sm-2 dropdown-item" href="#" type="search" placeholder="Usuario.." aria-label="Search">
     <input class="form-control mr-sm-2 dropdown-item" href="#" type="search" placeholder="Senha.." aria-label="Search">
     <button id="btndropdown" class="btn btn-outline-success my-2 my-sm-0 dropdown-item" type="submit">Login</button>
+	<h4 class="loginmenu"> <a href="frmCliente.php">Cadastro</a> </h3>
   </div>
 </div>
-
-
-    <h3 class="loginmenu"> <a href="login.php">Cadastro</a> </h3>
+	<a class="loginmenu" href="index.php"><img width="34px" src="dinosauro.png"/> Inicio </a>
   
     <?php
        }

@@ -8,7 +8,6 @@ class Cliente {
     private $email; 
     private $cpf;
     private $senha; 
-    private $filhos;
     private $cidade; 
     private $foto;
     private $sexo;
@@ -23,7 +22,6 @@ class Cliente {
         $this->email = $email;
         $this->cpf = $cpf;
         $this->senha = $senha;
-        $this->filhos = $filhos;
         $this->cidade = $cidade;
         $this->foto = $foto;
         $this->sexo = $sexo;
@@ -50,9 +48,6 @@ class Cliente {
     }
     function getSenha() {
         return $this->senha;
-    }
-    function getFilhos() {
-        return $this->filhos;
     }
     function getCidade() {
         return $this->cidade;
@@ -87,9 +82,6 @@ class Cliente {
     }
     function setSenha($senha) {
         $this->senha = $senha;
-    }
-    function setFilhos($filhos) {
-        $this->filhos = $filhos;
     }
     function setCidade($cidade) {
         $this->cidade = $cidade;
