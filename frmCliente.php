@@ -59,18 +59,18 @@
                 if( isset( $_SESSION['admin']) && $_SESSION['admin'] ){
                     
                     if( $admin ){
-                        echo '<input type="checkbox" selected name="cbAdmin" />';
+                        echo '<input type="checkbox" selected name="cbAdmin" value="1"/>';
                     } else {
-                        echo '<input type="checkbox" name="cbAdmin" />';
+                        echo '<input type="checkbox" name="cbAdmin" value="0" />';
                     }
                     echo ' <label>Admin</label> <br><br>';
                 }
             ?>
             
             <label>Nome: </label>
-            <input type="text" name="txtNome" value="<?php echo $nome; ?>" required maxlength="100" /> <br><br>
+            <input type="text" name="txtNome" value="<?php echo $nome; ?>" required maxlength="50" /> <br><br>
             <label>Telefone: </label>
-            <input type="text" name="txtTelefone" value="<?php echo $telefone; ?>" maxlength="30" /> <br><br>
+            <input type="text" name="txtTelefone" value="<?php echo $telefone; ?>" maxlength="20" /> <br><br>
             <label>E-mail: </label>
             <input type="email" name="txtEmail" value="<?php echo $email; ?>" required /> <br><br>
             

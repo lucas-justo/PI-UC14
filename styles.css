@@ -25,27 +25,23 @@ h2{
 #iphone{
 	text-shadow: 1px 1px 1px #596275;
 	font-size: 68px;
-	transition: 0.3s;
+	transition: 0.2s;
 }
 
 #vitrine:hover #iphone{
-	font-size: 70px;
 	text-shadow: 2px 2px 2px #f7d794;
-	transition: 0.4s;
-	letter-spacing: 2px;
+	transition: 0.2s;
 }
 
 #vitrine:hover  .img-fluid{
-transform: translateY(4px);
-transition: 0.4s;
-transform: scale(1.07);
+transition: 0.2s;
+transform: scale(1.05);
 }
 
 #vitrine:hover  h2{
-letter-spacing:2px;
 transform: translateY(1px);
 text-shadow: 2px 2px 2px #f7d794;
-transition: 0.4s;
+transition: 0.2s;
 }
 
 
@@ -123,11 +119,8 @@ border-color:#ea8685;
 background-color: #ea8685;
 display:flex;
 margin-top: 24px;
-margin-left: 2%;
 align-self: center;
 height: 450px;
-width: 60%;
-margin-right: 10%;
 align-content: center;
 background-image: url('crisp-paper-ruffles.png');
 box-shadow: 0 2px #c44569;
@@ -160,6 +153,18 @@ justify-content:center;
 max-width: 18% !important;
 max-height: 70% !important;
 min-width: 300px;
+}
+
+.col-sm-3:hover{
+background-color:  #877fb0;
+}
+
+.col-sm-4:hover{
+background-color:  #877fb0;
+}
+
+.promo:hover{
+background-color:  #877fb0;
 }
 
 .col-sm-4{
@@ -262,7 +267,7 @@ h4{color: #f5cd79;}
 }
 
 .loginmenu {
-	margin-left:68px;
+	font-size:25px;
 }
 
 #loginmenu{
@@ -277,7 +282,7 @@ h4{color: #f5cd79;}
 }
 
 #btndropdown{
-max-width: 48%;
+max-width: 68%;
 text-align: center;
 margin-left: auto;
 margin-right: auto;
@@ -333,4 +338,20 @@ ul {
 .correcao-promo{
 	width: 68%;
 	margin-top: 0%;
+}
+
+.btn-login{
+width: 120px;
+font-size:16px;
+margin-bottom: 0 !important;
+margin-left: 20px !important;
+}
+
+.btn-pesquisa{
+width: 100px;
+font-size:16px;
+}
+
+.dropdown-menu{
+	background:blanchedalmond;
 }

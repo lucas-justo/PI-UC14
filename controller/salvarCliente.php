@@ -17,6 +17,7 @@ if(isset ( $_REQUEST['inserir'] )){
         $cliente->setTelefone( $_POST['txtTelefone']);
         $cliente->setEmail( $_POST['txtEmail']);
         $cliente->setCpf( $_POST['txtCPF']);
+        $cliente->setAdmin( $_POST['cbAdmin']);
 
         $cliente->setSexo( $_POST['rbSexo']);
         $senha = md5($senha);

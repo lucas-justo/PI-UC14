@@ -14,8 +14,7 @@ class ClienteDAO {
                 . "   '".$cliente->getFoto()."' , "
                 . "    ".$cliente->getCidade()->getId()." , "
                 . "   '".$cliente->getSexo()."' , "
-                . "    ".$cliente->getAdmin()
-                . "  ); ";
+                . "    ".$cliente->getAdmin()."  ); ";
         
         Conexao::executar( $sql );
     }
@@ -53,8 +52,8 @@ class ClienteDAO {
         
         $result = Conexao::consultar($sql);
         $lista = new ArrayObject();
-        while( list( $cod, $nome, $fone, $cpf, $mail,
-            $foto, $idCidade, $nomeCid, $sexo, $filhos, $admin) = mysqli_fetch_row($result) ){
+        while( list( $cod, $nome, $fone, $cpf, $email,
+            $foto, $idCidade, $nomeCid, $sexo, $admin) = mysqli_fetch_row($result) ){
             $cidade = new Cidade();
             $cidade->setId( $idCidade );
             $cidade->setNome( $nomeCid );
@@ -62,7 +61,7 @@ class ClienteDAO {
             $cliente->setId($cod);
             $cliente->setNome($nome);
             $cliente->setTelefone($fone);
-            $cliente->setEmail($mail);
+            $cliente->setEmail($email);
             $cliente->setCpf($cpf);
             $cliente->setFoto($foto);
             $cliente->setCidade($cidade);

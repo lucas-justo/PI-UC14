@@ -61,10 +61,7 @@
                         else
                             echo '   <td>Masculino</td>';
                         
-                        if( $cli->getFilhos() )
-                            echo '   <td>Sim</td>';
-                        else
-                            echo '   <td>Não</td>';
+                       
                         
                         echo '   <td><a href="frmCliente.php?editar&idCliente='.$cli->getId().'" ><button>Editar</button></a></td>';
                         echo '   <td><a href="controller/salvarCliente.php?excluir&idCliente='.$cli->getId().'" ><button>Excluir</button></a></td>';

@@ -27,10 +27,10 @@ class Cliente {
         $this->sexo = $sexo;
     }
     
-    // Guetter
+    // Getter
     function getAdmin() {
         return $this->admin;
-        
+       } 
     function getId() {
         return $this->id;
     }
@@ -59,7 +59,7 @@ class Cliente {
         return $this->sexo;
     }
 
-    }
+    
 
     // Setter
     function setAdmin($admin) {
