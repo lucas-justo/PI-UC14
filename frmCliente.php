@@ -56,7 +56,7 @@
               enctype="multipart/form-data">
             
             <?php
-                if( isset( $_SESSION['admin']) && $_SESSION['admin'] ){
+                if( isset( $_SESSION['admin'] ) && $_SESSION['admin'] ){
                     
                     if( $admin ){
                         echo '<input type="checkbox" selected name="cbAdmin" value="1"/>';
@@ -67,6 +67,8 @@
                 }
             ?>
             
+		
+			
             <label>Nome: </label>
             <input type="text" name="txtNome" value="<?php echo $nome; ?>" required maxlength="50" /> <br><br>
             <label>Telefone: </label>

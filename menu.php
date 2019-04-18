@@ -17,8 +17,11 @@
 
      <a class="loginmenu" href="index.php"><h2>Inicio</h2> </a>
      <?php
+		   echo '<div class="logado">'; 
            echo '<h4> Olá, '.$_SESSION['nome'].'</h4>';
-           echo '<a href="sair.php"><button>Sair</button></a>';
+		   echo '<a class="nav-item" href="sair.php">Painel</a>';
+           echo '<a class="nav-item" href="sair.php">Sair</a>';
+		   echo '</div>';
           }else{
      ?>
 
@@ -29,9 +32,11 @@
         Fazer Login
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <input class="form-control mr-sm-2 dropdown-item" href="#" type="search" placeholder="Usuario.." aria-label="Search">
-        <input class="form-control mr-sm-2 dropdown-item" href="#" type="search" placeholder="Senha.." aria-label="Search">
-        <button id="btndropdown" class="btn btn-outline-success my-2 my-sm-0 dropdown-item" type="submit">Login</button>
+        <form action="entrar.php" method="POST">
+			<input class="form-control mr-sm-2 dropdown-item" href="#" type="text" name="txtLogin" placeholder="Email/CPF.." required autocomplete="off" />
+			<input class="form-control mr-sm-2 dropdown-item" href="#" type="password" name="txtSenha" placeholder="Senha.." required  autocomplete="off"/>
+			<input id="btndropdown" class="btn btn-outline-success my-2 my-sm-0 dropdown-item" type="submit" value="Entrar"/>
+		</form>
       <a class="loginmenu" href="frmCliente.php">Cadastro</a>
       </div>
   </div>
@@ -42,21 +47,10 @@
       <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">-->
       <ul class="navbar-nav ml-auto mx-auto">
        
-        <li class="nav-item dropdown col-6">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Computadores
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Desktops</a>
-            <a class="dropdown-item" href="#">Notebooks</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Tablets</a>
-          </div>
-        </li>   
-      
-      <li class="nav-item  col-4"><a  class="nav-link" href="#">Smartphones</a></li>
-      <li class="nav-item  col-4"><a  class="nav-link" href="#">Audio</a></li>
-      <li class="nav-item  col-4"><a  class="nav-link" href="#">TVs</a></li>        
+      <li class="nav-item  col-4"><a  class="nav-link" href="produtos1.php"> Computadores </a>  </li>   
+      <li class="nav-item  col-4"><a  class="nav-link" href="produtos2.php">Smartphones</a></li>
+      <li class="nav-item  col-4"><a  class="nav-link" href="produtos3.php">TVs</a></li>
+      <li class="nav-item  col-4"><a  class="nav-link" href="produtos.php">Todos Produtos</a></li>        
       </ul>
    <!-- </div> -->
     <form class="form-inline my-2 my-lg-0">

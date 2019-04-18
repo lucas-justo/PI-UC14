@@ -17,6 +17,7 @@
 	
 		<div class="blog"><br>
 			<h1>Conheça a DolphinLoja</h1><br>
+			<img class="about" src="kongsmile.jpg">
 			<h4>Uma empresa forjada no calor da juventude imergente de 5 estrelas da T.I.
 			Com o objetivo de desenvolver soluções, de forma simples e direta, para atender perfeitamente
 			a sua necessidade. Propondo idéias inovadoras, e adaptando elas para o ambiente do cliente.</h4>

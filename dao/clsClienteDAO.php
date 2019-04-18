@@ -5,7 +5,7 @@ class ClienteDAO {
     public static function inserir($cliente){
         $sql = "INSERT INTO cliente "
                 . " ( nome, telefone, cpf, email, senha, "
-                . "   foto, idCidade, sexo, admin ) VALUES "
+                . "   foto, idCidade, sexo , admin) VALUES "
                 . " ( '".$cliente->getNome()."' , "
                 . "   '".$cliente->getTelefone()."' , "
                 . "   '".$cliente->getCpf()."' , "
@@ -14,7 +14,7 @@ class ClienteDAO {
                 . "   '".$cliente->getFoto()."' , "
                 . "    ".$cliente->getCidade()->getId()." , "
                 . "   '".$cliente->getSexo()."' , "
-                . "    ".$cliente->getAdmin()."  ); ";
+				. "    ".$cliente->getAdmin()." ); ";
         
         Conexao::executar( $sql );
     }
@@ -87,7 +87,7 @@ class ClienteDAO {
         $result = Conexao::consultar($sql);
       
         list( $cod, $nome, $fone, $cpf, $mail,
-            $foto, $idCidade, $nomeCid, $sexo, $filhos, $admin) = mysqli_fetch_row($result);
+            $foto, $idCidade, $nomeCid, $sexo, $admin) = mysqli_fetch_row($result);
             $cidade = new Cidade();
             $cidade->setId( $idCidade );
             $cidade->setNome( $nomeCid );
@@ -100,7 +100,6 @@ class ClienteDAO {
             $cliente->setFoto($foto);
             $cliente->setCidade($cidade);
             $cliente->setSexo($sexo);
-            $cliente->setFilhos($filhos);
             $cliente->setAdmin($admin);
             
         return $cliente;
