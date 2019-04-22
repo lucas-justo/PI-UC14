@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Market M171 - Itens do Pedido</title>
+        <title>Itens do Pedido</title>
     </head>
     <body>
         <?php

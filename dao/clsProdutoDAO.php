@@ -17,12 +17,12 @@ class ProdutoDAO {
     
     public static function editar($produto){
         $sql = "UPDATE produto SET " 
-                . " nome =      '".$produto->getNome()."' , "
-                . " foto =      '".$produto->getFoto()."' , "
-                . " preco =      ".$produto->getPreco()." , "
-                . " quantidade = ".$produto->getQuantidade()." , "
-                . " idCategoria =    ".$produto->getCategoria()->getId()."  "
-                . " WHERE id = ".$produto->getId();
+                . " nome =        '".$produto->getNome()."' , "
+                . " foto =        '".$produto->getFoto()."' , "
+                . " preco =        ".$produto->getPreco()." , "
+                . " quantidade =   ".$produto->getQuantidade()." , "
+                . " idCategoria =  ".$produto->getCategoria()->getId()."  "
+                . " WHERE id =     ".$produto->getId();
         
         Conexao::executar( $sql );
     }
@@ -76,7 +76,7 @@ class ProdutoDAO {
       
         list( $id, $nome, $foto, $preco, $qtd, $idCategoria, $nomeCat) = mysqli_fetch_row($result);
             $categoria = new Categoria();
-            $categoria->setId( $idCat );
+            $categoria->setId( $idCategoria );
             $categoria->setNome( $nomeCat );
             
             $produto = new Produto();
@@ -85,7 +85,7 @@ class ProdutoDAO {
             $produto->setFoto($foto);
             $produto->setPreco($preco);
             $produto->setQuantidade($qtd);
-            $produto->setCategoria($idCategoria);
+            $produto->setCategoria($categoria);
             
         return $produto;
     }

@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Market M171 - Carrinho de Compras</title>
+        <title>Carrinho de Compras</title>
     </head>
     <body>
         <?php

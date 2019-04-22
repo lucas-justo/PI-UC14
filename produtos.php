@@ -52,7 +52,16 @@
                         
                         $preco = str_replace(".", ",",$pro->getPreco() );
                         echo '   <h4>R$ '.$preco.'</h4>';
-                        echo '</div>';
+						
+						$desabilita = "";
+						if( !isset( $_SESSION['admin']) || !$_SESSION['admin']  ){
+							//$desabilita = " hidden ";  
+						}
+						
+						echo ' <a class="nav-item"  href="frmProduto.php?editar&idProduto='.$pro->getId().'" '.$desabilita.' >Editar</a>'; 
+                        echo ' <a class="nav-item"  href="controller/salvarProduto.php?excluir&idProduto='.$pro->getId().' " '.$desabilita.' >Excluir</a>'; 
+						echo '<a class="nav-item" href="carrinho.php?adicionar&idProduto='.$pro->getId().'">Adicionar</a>';
+						echo '</div>';
                         
                     }
             ?>

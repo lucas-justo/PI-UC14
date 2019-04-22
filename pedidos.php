@@ -17,7 +17,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Market M171 - Pedidos</title>
+        <title>Pedidos</title>
     </head>
     <body>
         <?php

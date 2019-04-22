@@ -3,7 +3,7 @@
 class ItemDAO {
     
     public static function inserir( $item ){
-        $sql = " INSERT INTO itens "
+        $sql = " INSERT INTO item "
              . " (codPedido, codProduto, preco, quantidade) "
              . " VALUES ( "
              . $item->getPedido()->getId()  . " , "
@@ -18,7 +18,7 @@ class ItemDAO {
         $sql = "SELECT p.id, p.nome, p.foto, i.preco, "
              . "  i.quantidade, i.id "
              . " FROM produtos p "
-             . " INNER JOIN itens i ON i.codProduto = p.id "
+             . " INNER JOIN item i ON i.codProduto = p.id "
              . " WHERE i.codPedido = " . $idPedido;
      echo $sql;
         $result = Conexao::consultar( $sql );

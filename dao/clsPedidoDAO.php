@@ -3,7 +3,7 @@
 class PedidoDAO {
     
     public static function inserir( $pedido ){
-        $sql = " INSERT INTO pedidos "
+        $sql = " INSERT INTO pedido "
              . " (pagamento, endereco, horario, codCliente) "
              . " VALUES ( "
              . " '".$pedido->getPagamento()       ."' , "
@@ -24,10 +24,10 @@ class PedidoDAO {
              . " DATE_FORMAT( p.horario, '%d/%m/%Y %H:%i:%s' ) , "
              . " c.id, c.nome,                                   "
              . " ( SELECT SUM( i.preco * i.quantidade )          "
-             . "     FROM itens i                                "
-             . "     INNER JOIN pedidos p2 ON i.codPedido = p2.id  "
+             . "     FROM item i                                "
+             . "     INNER JOIN pedido p2 ON i.codPedido = p2.id  "
              . "     WHERE i.codPedido = p.id ) AS valor         "
-             . " FROM pedidos p                                  "
+             . " FROM pedido p                                  "
              . " INNER JOIN clientes c ON c.id = p.codCliente    "
              . $where." ORDER BY p.horario DESC                  ";
      

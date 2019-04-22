@@ -8,7 +8,7 @@ class Pedido {
     private $cliente;
     private $valor;
 
-    // Guetter
+    // Getter
     function getId() {
         return $this->id;
     }
