@@ -17,25 +17,18 @@
 
         <div class="container-fluid d-flex p-2 blog-container">
 
-            <div class="">
+            <div class="blog textPadding center">
+                <h1>Fale com os Dolphin Membros!</h1>
+                <br>
                 <form id="formContato" name="formContato" class="row">
-                    <input class="form-control" type="text" name="vSCONNOME" id="vSCONNOME" placeholder="Nome" required>
-                    <input class="form-control" type="email" name="vSCONEMAIL" id="vSCONEMAIL" placeholder="Email" required>
-                    <input class="form-control" type="tel" name="vSCONTELEFONE" id="vSCONTELEFONE" placeholder="Telefone" required>
-                    <input class="form-control" type="text" name="vSCONENDERECO" id="vSCONENDERECO" placeholder="Endereço" required>
-                    <textarea class="form-control" rows="5" name="vSCONMENSAGEM" id="vSCONMENSAGEM" placeholder="Mensagem" required></textarea>
-                    <button id="submit" type="submit" class="form-control" name="submit">Enviar Mensagem</button>
+                    <input class="form-control color" type="text" name="vSCONNOME" id="vSCONNOME" placeholder="Nome" required>
+                    <input class="form-control color" type="email" name="vSCONEMAIL" id="vSCONEMAIL" placeholder="Email" required>
+                    <input class="form-control color" type="tel" name="vSCONTELEFONE" id="vSCONTELEFONE" placeholder="Telefone" required>
+                    <input class="form-control color" type="text" name="vSCONENDERECO" id="vSCONENDERECO" placeholder="Endereço" required>
+                    <textarea class="form-control color" rows="5" name="vSCONMENSAGEM" id="vSCONMENSAGEM" placeholder="Mensagem" required></textarea>
+                    <button id="submit" type="submit" class="form-control color" name="submit">Enviar Mensagem</button>
                 </form>
             </div>
-        </div>
-
-        <div class="container-fluid correcao-promo promo">
-            <div class="texto">
-                <h1 class="foobar">SUPER PROMOÇÕES</h1>
-                <a href="www.google.com">
-                    <h4 id="oferta">Clique aqui e não perca! Só oferta boa Xuxuzinhos!</h4></a>
-            </div>
-            <img class="sachikopromo" src="sachiko.png" />
         </div>
 
 </body>
