@@ -189,6 +189,7 @@ a:hover {
 
 .item {
     margin-top: auto;
+    align-self:center;
 }
 
 .img-fluid {
