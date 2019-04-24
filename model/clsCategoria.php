@@ -9,7 +9,7 @@ class Categoria{
 
 	}
 
-	// Guetter
+	// Getter
 	function getId(){
 	return $this->id;
 	}

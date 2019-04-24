@@ -23,7 +23,7 @@
         $quantidade = $produto->getQuantidade();
         
         $foto = $produto->getFoto();
-        $idCategoria = $produto->getCategoria()->getId();
+        $idCategoria = $produto->getIdCategoria();
         $action = "editar&idProduto=".$produto->getId();
     }
     
@@ -54,9 +54,9 @@
             <label>Nome: </label>
             <input type="text" name="txtNome" value="<?php echo $nome; ?>" required maxlength="100" /> <br><br>
             <label>Preço: </label>
-            <input type="text" name="txtPreco" value="<?php echo $preco; ?>" maxlength="30" /> <br><br>
+            <input type="number" name="txtPreco" value="<?php echo $preco; ?>" maxlength="30" /> <br><br>
             <label>Quantidade: </label>
-            <input type="text" name="txtQuantidade" value="<?php echo $quantidade; ?>" required /> <br><br>
+            <input type="number" name="txtQuantidade" value="<?php echo $quantidade; ?>" required /> <br><br>
            
             <label>Categoria: </label>
             <select name="categoria" >

@@ -47,9 +47,9 @@
       <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">-->
       <ul class="navbar-nav ml-auto mx-auto">
        
-      <li class="nav-item  col-4"><a  class="nav-link" href="produtos1.php"> Computadores </a>  </li>   
-      <li class="nav-item  col-4"><a  class="nav-link" href="produtos2.php">Smartphones</a></li>
-      <li class="nav-item  col-4"><a  class="nav-link" href="produtos3.php">TVs</a></li>
+      <li class="nav-item  col-4"><a  class="nav-link" href="produtosPC.php"> Computadores </a>  </li>   
+      <li class="nav-item  col-4"><a  class="nav-link" href="produtosPhone.php">Smartphones</a></li>
+      <li class="nav-item  col-4"><a  class="nav-link" href="produtosTV.php">TVs</a></li>
       <li class="nav-item  col-4"><a  class="nav-link" href="produtos.php">Todos Produtos</a></li>        
       </ul>
    <!-- </div> -->

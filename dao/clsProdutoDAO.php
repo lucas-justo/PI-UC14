@@ -9,9 +9,10 @@ class ProdutoDAO {
                 . "   '".$produto->getFoto()."' , "
                 . "    ".$produto->getPreco()." , "
                 . "    ".$produto->getQuantidade()." , "
-                . "    ".$produto->getCategoria()->getId()."  "
+                . "    ".$produto->getIdCategoria()."  "
                 . "  ); ";
         
+		echo $sql;
         Conexao::executar( $sql );
     }
     
@@ -21,7 +22,7 @@ class ProdutoDAO {
                 . " foto =        '".$produto->getFoto()."' , "
                 . " preco =        ".$produto->getPreco()." , "
                 . " quantidade =   ".$produto->getQuantidade()." , "
-                . " idCategoria =  ".$produto->getCategoria()->getId()."  "
+                . " idCategoria =  ".$produto->getIdCategoria()."  "
                 . " WHERE id =     ".$produto->getId();
         
         Conexao::executar( $sql );
@@ -44,10 +45,8 @@ class ProdutoDAO {
         
         $result = Conexao::consultar($sql);
         $lista = new ArrayObject();
-        while( list( $id, $nome, $foto, $preco, $qtd , $idCategoria , $nomeCat) = mysqli_fetch_row($result) ){
-            $categoria = new Categoria();
-            $categoria->setId( $idCategoria );
-            $categoria->setNome( $nomeCat );
+        while( list( $id, $nome, $foto, $preco, $qtd , $idCategoria ) = mysqli_fetch_row($result) ){
+    
             
             $produto = new Produto();
             $produto->setId($id);
@@ -55,7 +54,7 @@ class ProdutoDAO {
             $produto->setFoto($foto);
             $produto->setPreco($preco);
             $produto->setQuantidade($qtd);
-            $produto->setCategoria($idCategoria);
+            $produto->setIdCategoria($idCategoria);
            
   
             $lista->append($produto);
@@ -75,9 +74,27 @@ class ProdutoDAO {
         $result = Conexao::consultar($sql);
       
         list( $id, $nome, $foto, $preco, $qtd, $idCategoria, $nomeCat) = mysqli_fetch_row($result);
-            $categoria = new Categoria();
-            $categoria->setId( $idCategoria );
-            $categoria->setNome( $nomeCat );
+
+            $produto = new Produto();
+            $produto->setId($id);
+            $produto->setNome($nome);
+            $produto->setFoto($foto);
+            $produto->setPreco($preco);
+            $produto->setQuantidade($qtd);
+            $produto->setIdCategoria($idCategoria);
+            
+        return $produto;
+    }
+	
+	 public static function getProdutosPC(){
+        $sql = " SELECT p.id, p.nome, p.foto, p.preco, p.quantidade, c.id, c.nome "
+			 . " FROM produto p  INNER JOIN categoria c " 
+			 . " ON p.idCategoria = c.id "
+			 . " where p.idCategoria = 2 ORDER BY p.nome ";
+        
+        $result = Conexao::consultar($sql);
+        $lista = new ArrayObject();
+        while( list( $id, $nome, $foto, $preco, $qtd , $idCategoria , $nomeCat) = mysqli_fetch_row($result) ){
             
             $produto = new Produto();
             $produto->setId($id);
@@ -85,21 +102,66 @@ class ProdutoDAO {
             $produto->setFoto($foto);
             $produto->setPreco($preco);
             $produto->setQuantidade($qtd);
-            $produto->setCategoria($categoria);
-            
-        return $produto;
-    }
+            $produto->setIdCategoria($idCategoria);
+           
   
-    
-   
-    
+            $lista->append($produto);
+        }
+        
+        return $lista;
+    }
+
+	public static function getProdutosTV(){
+        $sql = " SELECT p.id, p.nome, p.foto, p.preco, p.quantidade, c.id, c.nome "
+			 . " FROM produto p  INNER JOIN categoria c " 
+			 . " ON p.idCategoria = c.id "
+			 . " where p.idCategoria = 5 ORDER BY p.nome ";
+        
+        $result = Conexao::consultar($sql);
+        $lista = new ArrayObject();
+        while( list( $id, $nome, $foto, $preco, $qtd , $idCategoria , $nomeCat) = mysqli_fetch_row($result) ){
+            
+            $produto = new Produto();
+            $produto->setId($id);
+            $produto->setNome($nome);
+            $produto->setFoto($foto);
+            $produto->setPreco($preco);
+            $produto->setQuantidade($qtd);
+            $produto->setIdCategoria($idCategoria);
+           
+  
+            $lista->append($produto);
+        }
+        
+        return $lista;
+    }
+
+	public static function getProdutosPhone(){
+        $sql = " SELECT p.id, p.nome, p.foto, p.preco, p.quantidade, c.id, c.nome "
+			 . " FROM produto p  INNER JOIN categoria c " 
+			 . " ON p.idCategoria = c.id "
+			 . " where p.idCategoria = 7 ORDER BY p.nome ";
+        
+        $result = Conexao::consultar($sql);
+        $lista = new ArrayObject();
+        while( list( $id, $nome, $foto, $preco, $qtd , $idCategoria , $nomeCat) = mysqli_fetch_row($result) ){
+            $produto = new Produto();
+            $produto->setId($id);
+            $produto->setNome($nome);
+            $produto->setFoto($foto);
+            $produto->setPreco($preco);
+            $produto->setQuantidade($qtd);
+            $produto->setIdCategoria($idCategoria);
+           
+  
+            $lista->append($produto);
+        }
+        
+        return $lista;
+    }
+
+
 }
-
-
-
-
-
-
 
 
 

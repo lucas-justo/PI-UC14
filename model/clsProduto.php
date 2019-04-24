@@ -5,7 +5,7 @@ class Produto{
 	private $nome;
 	private $preco;
 	private $quantidade;
-	private $categoria;
+	private $idCategoria;
 	private $foto;
     private $descricao;
     private $marca;
@@ -32,8 +32,8 @@ class Produto{
 		return $this->quantidade;
 	}
 
-	function getCategoria(){
-		return $this->categoria;
+	function getIdCategoria(){
+		return $this->idCategoria;
 	}
 
 	function getFoto(){
@@ -41,15 +41,15 @@ class Produto{
 	}
 	
 	function getDescricao(){
-        return $this->$descricao;
+        return $this->descricao;
 	}
 	
 	function getPromo(){
-        return $this->$promo;
+        return $this->promo;
 	}
 	
 	function getMarca(){
-        return $this->$marca;
+        return $this->marca;
 	}
 	
 
@@ -70,8 +70,8 @@ class Produto{
 		$this->quantidade = $quantidade;
 	}
 
-	function setCategoria($categoria){
-		$this->categoria = $categoria;
+	function setIdCategoria($idCategoria){
+		$this->idCategoria = $idCategoria;
 	}
 
 	function setFoto($foto){

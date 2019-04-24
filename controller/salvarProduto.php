@@ -14,11 +14,7 @@ if( isset($_REQUEST['inserir'])  ){
         $qtd = $_POST['txtQuantidade'];
         $qtd = str_replace(",", ".", $qtd);
         $produto->setQuantidade( $qtd );
-   
-        
-        $cat = new Categoria();
-        $cat->setId( $_POST['categoria']);
-        $produto->setCategoria( $cat ); 
+        $produto->setIdCategoria( $_POST['categoria'] ); 
         
         $produto->setFoto( salvarFoto() );
         
@@ -55,9 +51,8 @@ if( isset($_REQUEST['editar'])){
     $produto->setQuantidade( $qtd );
 
 
-    $cat = new Categoria();
-    $cat->setId( $_POST['categoria']);
-    $produto->setCategoria( $cat ); 
+
+    $produto->setIdCategoria( $_POST['categoria'] ); 
     
     ProdutoDAO::editar($produto);
     
