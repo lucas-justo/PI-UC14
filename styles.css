@@ -404,11 +404,11 @@ ul {
 }
 
 .color{
-	background-color: #ffb2f9;
+	background-color: #eadef0;
 	border-color: black;
 	max-width: 60%;
 	margin-left: auto;
-    margin-right: auto;
+   	margin-right: auto;
 	color: white;
 }
 
@@ -422,4 +422,35 @@ textarea::placeholder {
   color: black;
   font-size: 1.2em;
   font-style: italic;
+}
+
+h4{
+display: inline-block;
+}
+
+.ovo{
+	margin-top: 18px;
+	background-color: #7866c266;
+	border-radius:50%;
+	width: 350px;
+	height: 345px;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+.finalizarpedido{
+	margin-top: 20px;
+	margin-left: 62px;
+	position: absolute;
+	color:#8468ad;
+	text-shadow: 1px 1px 1px #341241;
+}
+
+.finalizarpedido2{
+	margin-top: 240px;
+	margin-left: 88px;
+	position: absolute;
+	color:#8468ad;
+	text-shadow: 1px 1px 1px #341241;
 }

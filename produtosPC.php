@@ -18,12 +18,12 @@
             require_once 'menu.php';
         ?>
         
-        <h1 id="iphone" align="center">Produtos</h1>
-        
+        <h1 id="iphone" align="center">Computadores</h1>
+        <hr>
         <br><br><br>
         
         <?php
-           // if( isset( $_SESSION['admin']) && $_SESSION['admin'] ){
+            if( isset( $_SESSION['admin']) && $_SESSION['admin'] ){
         ?>
                 <a href="frmProduto.php">
                     <button class="btn btn-large">Cadastrar novo Produto</button></a>
@@ -31,7 +31,7 @@
 				<a href="frmCategoria.php">
 					<button class="btn btn-large">Cadastrar nova Categoria</button></a>
         <?php
-           // }
+            }
             
             $lista = ProdutoDAO::getProdutosPC();
             
@@ -55,11 +55,11 @@
                         echo '   <h1  class="textoprodutos">'.$pro->getNome().'</h1>';
                         
                         $preco = str_replace(".", ",",$pro->getPreco() );
-                        echo '   <h4  class="preco">'.$preco.'</h4>';
+                        echo '<div><h4>R$ </h4><h4 class="preco">'.$preco.'</h4> </div>';
 						
 						$desabilita = "";
 						if( !isset( $_SESSION['admin']) || !$_SESSION['admin']  ){
-							//$desabilita = " hidden ";  
+							$desabilita = " hidden ";  
 						}
 						
 						echo ' <a class="nav-item"  href="frmProduto.php?editar&idProduto='.$pro->getId().'" '.$desabilita.' >Editar</a>'; 
@@ -78,7 +78,6 @@
             
         ?>
 		
-        <button onclick="esconderPreco()">preco</button>
 		
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

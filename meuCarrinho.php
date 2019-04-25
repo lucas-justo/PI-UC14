@@ -10,8 +10,11 @@
 
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>Carrinho de Compras</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Corben" />
+        <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
     <body>
         <?php
@@ -61,10 +64,17 @@
                 echo '      <th colspan="3">R$ '.$total.'</th>';
                 echo '  </tr>';
                 echo '</table>';
-                
-                echo '<hr> '
-                   . '<a href="finalizarPedido.php">'
-                   . '       <button>Finalizar Pedido</button></a>';
+                ?>
+				
+				<div class="ovo">
+				<h1 class="finalizarpedido">FINALIZAR</h1>
+				<h1 class="finalizarpedido2"> PEDIDO</h1>
+				<img src="sorvete.png"/>
+				</div>
+				
+				<?php
+				
+              
             }
             
         
@@ -72,6 +82,16 @@
     </body>
 </html>
 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<script>
+$(".ovo").on('click', function(){
+		 window.location = 'finalizarPedido.php';    
+	});
+	
+</script>
 
 
 

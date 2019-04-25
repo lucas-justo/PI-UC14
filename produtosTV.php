@@ -18,12 +18,12 @@
             require_once 'menu.php';
         ?>
         
-        <h1 id="iphone" align="center">Produtos</h1>
-        
+        <h1 id="iphone" align="center">TVs</h1>
+        <hr>
         <br><br><br>
         
         <?php
-           // if( isset( $_SESSION['admin']) && $_SESSION['admin'] ){
+            if( isset( $_SESSION['admin']) && $_SESSION['admin'] ){
         ?>
                 <a href="frmProduto.php">
                     <button class="btn btn-large">Cadastrar novo Produto</button></a>
@@ -31,7 +31,7 @@
 				<a href="frmCategoria.php">
 					<button class="btn btn-large">Cadastrar nova Categoria</button></a>
         <?php
-           // }
+            }
             
             $lista = ProdutoDAO::getProdutosTV();
             
@@ -55,11 +55,11 @@
                         echo '   <h1  class="textoprodutos">'.$pro->getNome().'</h1>';
                         
                         $preco = str_replace(".", ",",$pro->getPreco() );
-                        echo '   <h4  class="preco">'.$preco.'</h4>';
+                        echo '<div><h4>R$ </h4><h4 class="preco">'.$preco.'</h4> </div>';
 						
 						$desabilita = "";
 						if( !isset( $_SESSION['admin']) || !$_SESSION['admin']  ){
-							//$desabilita = " hidden ";  
+							$desabilita = " hidden ";  
 						}
 						
 						echo ' <a class="nav-item"  href="frmProduto.php?editar&idProduto='.$pro->getId().'" '.$desabilita.' >Editar</a>'; 

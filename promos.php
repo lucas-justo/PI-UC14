@@ -18,20 +18,16 @@
             require_once 'menu.php';
         ?>
         
-        <h1 id="iphone" align="center">Produtos</h1>
-        <hr>
-        <br><br><br>
+		<div class="ovo">
+        <img src="sorvete.png"/>
+		</div>
+		<h1 id="iphone" align="center">PROMOÇÕES</h1>
+		<hr>
+
+        <br><br><br>        
         
         <?php
-            if( isset( $_SESSION['admin']) && $_SESSION['admin'] ){
-        ?>
-                <a href="frmProduto.php">
-                    <button class="btn btn-large">Cadastrar novo Produto</button></a>
-                <br><br>
-				<a href="frmCategoria.php">
-					<button class="btn btn-large">Cadastrar nova Categoria</button></a>
-        <?php
-            }
+            
             
             $lista = ProdutoDAO::getProdutos();
             

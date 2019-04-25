@@ -86,6 +86,31 @@ class ProdutoDAO {
         return $produto;
     }
 	
+	public static function getProdutoByName($pesquisa){
+        $sql = " SELECT id, nome, foto, preco, quantidade, idCategoria "
+			 . " FROM produto " 
+			 . " WHERE nome LIKE '%".$pesquisa."%' ORDER BY nome ";
+        
+        $result = Conexao::consultar($sql);
+        $lista = new ArrayObject();
+        while( list( $id, $nome, $foto, $preco, $qtd , $idCategoria) = mysqli_fetch_row($result) ){
+            
+            $produto = new Produto();
+            $produto->setId($id);
+            $produto->setNome($nome);
+            $produto->setFoto($foto);
+            $produto->setPreco($preco);
+            $produto->setQuantidade($qtd);
+            $produto->setIdCategoria($idCategoria);
+           
+  
+            $lista->append($produto);
+        }
+        
+        return $lista;
+    }
+
+	
 	 public static function getProdutosPC(){
         $sql = " SELECT p.id, p.nome, p.foto, p.preco, p.quantidade, c.id, c.nome "
 			 . " FROM produto p  INNER JOIN categoria c " 
