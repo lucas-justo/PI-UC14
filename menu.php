@@ -19,7 +19,7 @@
                 <?php
 		   echo '<div class="logado">'; 
            echo '<h4> Olá, '.$_SESSION['nome'].'</h4>';
-		   echo '<a class="nav-item" href="sair.php">Painel</a>';
+		   echo '<a class="nav-item" href="painel.php">Painel</a>';
            echo '<a class="nav-item" href="sair.php">Sair</a>';
 		   echo '</div>';
           }else{
@@ -51,6 +51,7 @@
                             <li class="nav-item  col-4"><a class="nav-link" href="produtosPhone.php">Smartphones</a></li>
                             <li class="nav-item  col-4"><a class="nav-link" href="produtosTV.php">TVs</a></li>
                             <li class="nav-item  col-4"><a class="nav-link" href="produtos.php">Todos Produtos</a></li>
+							<li class="nav-item  col-4"><a class="nav-link" href="meuCarrinho.php">Carrinho</a></li>
                         </ul>
                         <!-- </div> -->
                         <form action="pesquisa.php" method="POST" class="form-inline my-2 my-lg-0">

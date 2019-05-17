@@ -168,8 +168,8 @@
             <?php 
                 }
             ?>
-            <input type="submit" value="Salvar" />
-            <input type="reset" value="Limpar" />
+            <input class="btn" type="submit" name="Salvar" value="Salvar" />
+            <input class="btn" type="reset" value="Limpar" />
             
             
         </form>

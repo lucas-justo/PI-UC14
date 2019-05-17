@@ -102,7 +102,7 @@
 	 <div class="termos texto2 col-sm-4">
 		 <a><h1>TERMOS</h1></a>
 		 <a><h1>E</h1></a>
-		 <a href="www.google.com"><h1>CONDIÇÕES</h1></a>
+		 <h1>CONDIÇÕES</h1>
 	 </div> 	 
 </div>
 

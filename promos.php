@@ -18,7 +18,7 @@
             require_once 'menu.php';
         ?>
         
-		<div class="ovo">
+		<div class="ovo2">
         <img src="sorvete.png"/>
 		</div>
 		<h1 id="iphone" align="center">PROMOÇÕES</h1>

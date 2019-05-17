@@ -35,8 +35,8 @@
 		
 		<label>Nome: </label>
 		<input type="text" name="txtNome" value="<?php echo $nome; ?>" required maxlenght="100" />
-		<input type="submit" value="Salvar" />
-		<input type="reset" value="Limpar" />
+		<input class="btn-danger" type="submit" value="Salvar" />
+		<input class="btn-danger" type="reset" value="Limpar" />
 		
 		</form>
 		

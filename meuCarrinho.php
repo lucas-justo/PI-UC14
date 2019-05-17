@@ -56,7 +56,7 @@
                     $total += $subtotal;
                     echo '      <td>R$ '.$subtotal.'</td>';
                     echo '      <td><a href="carrinho.php?excluir&idProduto='
-                            .$produto->getId().'" ><button>Excluir</button></a></td>';
+                            .$produto->getId().'" ><button class="btn">Excluir</button></a></td>';
                     echo ' </tr>';
                 }
                 echo '  <tr>';

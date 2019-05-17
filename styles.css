@@ -100,7 +100,7 @@ a:hover {
 .btn:hover {
     box-shadow: 0 6px #c44569;
     transition: 0.2s;
-    background-color: #e77574;
+    background-color: #e6667de6;
     border-color: #e77574;
 }
 
@@ -113,7 +113,7 @@ a:hover {
     box-shadow: 0 6px #c44569;
     letter-spacing: 1px;
     transition: 0.2s;
-    background-color: #e77574;
+    background-color: #e6667de6;
     border-color: #e77574;
 }
 
@@ -377,6 +377,8 @@ ul {
     color: #303952;
     font-size: 19px;
     text-shadow: 2px 2px 2px #8f4cb9;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
 }
 
 .logado {
@@ -428,6 +430,19 @@ h4{
 display: inline-block;
 }
 
+.ovo2{
+	margin-top: 18px;
+	background-color: #7866c266;
+	border-radius:50%;
+	width: 350px;
+	height: 345px;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;	
+	transition: 0.1s;
+	box-shadow: 0 4px #3b3e75
+}
+
 .ovo{
 	margin-top: 18px;
 	background-color: #7866c266;
@@ -437,20 +452,45 @@ display: inline-block;
 	overflow: hidden;
 	margin-left: auto;
 	margin-right: auto;	
+	transition: 0.1s;
+	box-shadow: 0 4px #3b3e75
+}
+
+.ovo:hover {
+	background-color: #40308666;
+	box-shadow: 0 4px #6c6f9f;
+	cursor:pointer;
+	transform: translateY(2px);
+	box-shadow: 0 1px #26295c;
+}
+
+.ovo:hover .finalizarpedido{
+	color:#b31d52;
+}
+
+.ovo:hover .finalizarpedido2{
+	color:#b31d52;
 }
 
 .finalizarpedido{
-	margin-top: 20px;
+	margin-top: 28px;
 	margin-left: 62px;
 	position: absolute;
-	color:#8468ad;
+	color:#cf356c;
 	text-shadow: 1px 1px 1px #341241;
+	transition: 0.1s;
 }
 
 .finalizarpedido2{
 	margin-top: 240px;
 	margin-left: 88px;
 	position: absolute;
-	color:#8468ad;
+	color:#cf356c;
 	text-shadow: 1px 1px 1px #341241;
+	transition: 0.1s;
+}
+
+table{
+	margin-left: auto;
+	margin-right: auto;
 }
