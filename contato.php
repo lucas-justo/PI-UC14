@@ -13,6 +13,9 @@
 
     <?php
             require_once 'menu.php';
+			include_once 'model/clsContato.php';
+			include_once 'dao/clsContatoDAO.php';
+			include_once 'dao/clsConexao.php';
         ?>
 
         <div class="container-fluid d-flex p-2 blog-container">
@@ -20,7 +23,7 @@
             <div class="blog textPadding center">
                 <h1>Fale com os Dolphin Membros!</h1>
                 <br>
-                <form id="formContato" name="formContato" class="row">
+                <form id="formContato" name="formContato" class="row" action="controller/salvarContato.php?inserir" method="POST">
                     <input class="form-control color" type="text" name="vSCONNOME" id="vSCONNOME" placeholder="Nome" required>
                     <input class="form-control color" type="email" name="vSCONEMAIL" id="vSCONEMAIL" placeholder="Email" required>
                     <input class="form-control color" type="tel" name="vSCONTELEFONE" id="vSCONTELEFONE" placeholder="Telefone" required>

@@ -67,3 +67,12 @@ ADD FOREIGN KEY (idCidade) REFERENCES cidade(id) ON DELETE CASCADE ON UPDATE NO 
 INSERT INTO categoria (nome) VALUES ( "Sem Categoria" ) , ("Computadores"),("Notebooks"), ("Audio"),("TVs"),("Tablets"),("Smartphones");
 
 ALTER TABLE cliente ADD COLUMN admin INT;
+
+CREATE TABLE contato (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT ,
+    nome VARCHAR(50),
+    email VARCHAR(50),
+    telefone VARCHAR(50),
+    endereco VARCHAR(50),
+    mensagem VARCHAR(500)
+);
