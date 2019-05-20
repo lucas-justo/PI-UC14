@@ -21,7 +21,7 @@
         <div class="container-fluid d-flex p-2 blog-container">
 
             <div class="blog textPadding center">
-                <h1>Fale com os Dolphin Membros!</h1>
+                <h1>Fale com os Dolphin Membros!!</h1>
                 <br>
                 <form id="formContato" name="formContato" class="row" action="controller/salvarContato.php?inserir" method="POST">
                     <input class="form-control color" type="text" name="vSCONNOME" id="vSCONNOME" placeholder="Nome" required>
